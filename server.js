@@ -3,34 +3,14 @@ const he = require("he");
 const immutable = require("immutable");
 const fs = require("fs");
 const lambda = require("@calculemus/abt-lambda");
+const storage = require("node-persist");
 
 const Set = immutable.Set;
 const slack = tinyspeck.instance({
   token: process.env.BOT_TOKEN
 });
 
-// Handle flat-file cached database of event IDs to prevent duplicate responses
-let served = new Promise((resolve) => {
-  fs.readFile(".data/events.txt", (err, data) => {
-    if (err || !data) {
-      fs.appendFile(".data/log.txt", `IN err: ${err}\n`, () => { return; });
-      resolve(Set([]));
-    } else {
-      resolve(data.toString().split(/\s*/).reduce((set, id) => set.add(id), Set([])));
-    }
-  });
-});
-
-function recordServed(eventIds, eventId) {
-  return new Promise((resolve) => {
-    fs.appendFile(".data/events.txt", `${eventId}\n`, (err, data) => {
-      if (err) {
-        fs.appendFile(".data/log.txt", `AP err: ${err}\n`, () => { return; });        
-      }
-      resolve(eventIds.add(eventId));
-    })
-  })
-}
+storage.initSync({ dir: ".data/storage" });
 
 // Utility function for replies
 function reply(message, text) {
@@ -51,23 +31,16 @@ function log(source, code, message) {
 
 // Main logic
 function goAlonzoGo(message, source, input) {
-  // Find the code we'll use to log this event.
   if (message.event.subtype === "bot_message") {
     log(source, "bot", message);
     return;
   }
-  served.then((eventIds) => {
-    if (eventIds.has(message.event_id)) {
-      console.log(`${message.event_id} duplicate`);
-      return true;
-    } else {
-      served = recordServed(eventIds, message.event_id); 
-      return false;
-    }
-  }).then(isDuplicateRequest => {
+  
+  storage.getItem(message.event_id).then(isDuplicateRequest => {
     log(source, isDuplicateRequest ? "dup" : "res", message);
-    if (isDuplicateRequest) return;
-    
+    if (isDuplicateRequest) throw new Error("Duplicate");
+    return storage.setItem(message.event_id, input);
+  }).then(() => {
     try {
       const [fv, e] = lambda.parse(input);
       const parsed = lambda.toString(e);
@@ -85,7 +58,8 @@ function goAlonzoGo(message, source, input) {
       console.log(`${message.event_id} parse error`);
       reply(message, `\`\`\`\n${e}\`\`\``);
     }
-    
+  }).catch(() => {
+    console.log(`${message.event_id} duplicate`);
   });
 }
 

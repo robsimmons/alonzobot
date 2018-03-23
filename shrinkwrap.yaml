@@ -2,6 +2,7 @@ dependencies:
   '@calculemus/abt-lambda': 0.0.5
   he: 1.1.1
   immutable: 3.8.2
+  node-persist: 2.1.0
   tinyspeck: 1.4.2
 packages:
   /@calculemus/abt-lambda/0.0.5:
@@ -58,6 +59,47 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
+  /is-absolute/0.2.6:
+    dependencies:
+      is-relative: 0.2.1
+      is-windows: 0.2.0
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-IN5p89uULvLYe5wto28XIjWxtes=
+  /is-relative/0.2.1:
+    dependencies:
+      is-unc-path: 0.1.2
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-0n9MfVFtF1+2ENuEu+7yPDvJeqU=
+  /is-unc-path/0.1.2:
+    dependencies:
+      unc-path-regex: 0.1.2
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-arBTpyVzwQJQ/0FqOBTDUXivObk=
+  /is-windows/0.2.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-3hqm1j6indJIc3tp8f+LgALSEIw=
+  /minimist/0.0.8:
+    dev: false
+    resolution:
+      integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
+  /mkdirp/0.5.1:
+    dependencies:
+      minimist: 0.0.8
+    dev: false
+    resolution:
+      integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   /moo/0.4.3:
     dev: false
     resolution:
@@ -75,6 +117,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ioYYogSaZhFlCpRizQgY3UT3G1qFXmHGY/5ozoFE3dMfiCRAeJfh+IPE3/eh9gCZvqLhPCWb4bLt7Bqzo+1mLQ==
+  /node-persist/2.1.0:
+    dependencies:
+      is-absolute: 0.2.6
+      mkdirp: 0.5.1
+      q: 1.1.2
+    dev: false
+    resolution:
+      integrity: sha1-5lK784haBNrWo1PXQXYXfIORRwc=
   /nomnom/1.6.2:
     dependencies:
       colors: 0.5.1
@@ -89,6 +139,13 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-7CLTEoBrtT5zF3Pnza788cZDEo8=
+  /q/1.1.2:
+    dev: false
+    engines:
+      node: '>=0.6.0'
+      teleport: '>=0.2.0'
+    resolution:
+      integrity: sha1-Y1fikSBnAdmfGXq4TlforRlvKok=
   /railroad-diagrams/1.0.0:
     dev: false
     resolution:
@@ -134,6 +191,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-rOEWq1V80Zc4ak6I9GhTeMiy5Po=
+  /unc-path-regex/0.1.2:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-5z3T17DXxe2G+6xrCufYxqadUPo=
   /underscore/1.4.4:
     dev: false
     resolution:
@@ -152,4 +215,5 @@ specifiers:
   '@calculemus/abt-lambda': ^0.0.5
   he: ^1.1.1
   immutable: ^3.8.2
+  node-persist: ^2.1.0
   tinyspeck: ^1.4.2

@@ -1,0 +1,155 @@
+dependencies:
+  '@calculemus/abt-lambda': 0.0.5
+  he: 1.1.1
+  immutable: 3.8.2
+  tinyspeck: 1.4.2
+packages:
+  /@calculemus/abt-lambda/0.0.5:
+    dependencies:
+      '@calculemus/abt': 0.1.3
+      immutable: 3.8.2
+      moo: 0.4.3
+      nearley: 2.13.0
+    dev: false
+    resolution:
+      integrity: sha512-F7kc5FKN/1J5SNp84LynWHhI/tUjeiwrWoBbZMzYm8BmpnbSZqeB1DUmbh3ij6qTF5bWkXyTB75/j+T8I6PfBA==
+  /@calculemus/abt/0.1.3:
+    dependencies:
+      immutable: 3.8.2
+    dev: false
+    resolution:
+      integrity: sha512-k4j1GH1jmaty6/lgHVrzBl/ioZGKmzrVXFzhwFt5oG6fP0wy6QyrpB1PXNBWy4R5PXgV7jt1UziRhrAT34o7vw==
+  /axios/0.13.1:
+    dependencies:
+      follow-redirects: 0.0.7
+    dev: false
+    resolution:
+      integrity: sha1-Pmer/kMzvJ0tX+b70TtGlOr8jfg=
+  /colors/0.5.1:
+    dev: false
+    engines:
+      node: '>=0.1.90'
+    resolution:
+      integrity: sha1-fQAj6usVTo7p/Oddy5I9DtFmd3Q=
+  /debug/2.6.9:
+    dependencies:
+      ms: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  /discontinuous-range/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-44Mx8IRLukm5qctxx3FYWqsbxlo=
+  /follow-redirects/0.0.7:
+    dependencies:
+      debug: 2.6.9
+      stream-consume: 0.1.1
+    dev: false
+    resolution:
+      integrity: sha1-NLkLqyqRGqNHVx2pDyK9NuzYqRk=
+  /he/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
+  /immutable/3.8.2:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
+  /moo/0.4.3:
+    dev: false
+    resolution:
+      integrity: sha512-gFD2xGCl8YFgGHsqJ9NKRVdwlioeW3mI1iqfLNYQOv0+6JRwG58Zk9DIGQgyIaffSYaO1xsKnMaYzzNr1KyIAw==
+  /ms/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+  /nearley/2.13.0:
+    dependencies:
+      nomnom: 1.6.2
+      railroad-diagrams: 1.0.0
+      randexp: 0.4.6
+      semver: 5.5.0
+    dev: false
+    resolution:
+      integrity: sha512-ioYYogSaZhFlCpRizQgY3UT3G1qFXmHGY/5ozoFE3dMfiCRAeJfh+IPE3/eh9gCZvqLhPCWb4bLt7Bqzo+1mLQ==
+  /nomnom/1.6.2:
+    dependencies:
+      colors: 0.5.1
+      underscore: 1.4.4
+    deprecated: Package no longer supported. Contact support@npmjs.com for more info.
+    dev: false
+    resolution:
+      integrity: sha1-hKZqJgF0QI/Ft3oY+IjszET7aXE=
+  /options/0.0.6:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-7CLTEoBrtT5zF3Pnza788cZDEo8=
+  /railroad-diagrams/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
+  /randexp/0.4.6:
+    dependencies:
+      discontinuous-range: 1.0.0
+      ret: 0.1.15
+    dev: false
+    engines:
+      node: '>=0.12'
+    resolution:
+      integrity: sha512-80WNmd9DA0tmZrw9qQa62GPPWfuXJknrmVmLcxvq4uZBdYqb1wYoKTmnlGUchvVWe0XiLupYkBoXVOxz3C8DYQ==
+  /ret/0.1.15:
+    dev: false
+    engines:
+      node: '>=0.12'
+    resolution:
+      integrity: sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+  /semver/5.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
+  /slack-payload/1.0.10:
+    dev: false
+    resolution:
+      integrity: sha1-3RWxo0BF/E5ujRSOK35X3J+LJjw=
+  /stream-consume/0.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-tNa3hzgkjEP7XbCkbRXe1jpg+ievoa0O4SCFlMOYEscGSS4JJsckGL8swUyAa/ApGU3Ae4t6Honor4HhL+tRyg==
+  /tinyspeck/1.4.2:
+    dependencies:
+      axios: 0.13.1
+      slack-payload: 1.0.10
+      ws: 1.1.5
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-4KXygKubQwHlfZqjdr2D2ip6ypyDxy/G6ABPqhE8KtmjYa3oWaU30OCDj3WMDZf/8oDXmeDvJNqrWY2X+BMFGw==
+  /ultron/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-rOEWq1V80Zc4ak6I9GhTeMiy5Po=
+  /underscore/1.4.4:
+    dev: false
+    resolution:
+      integrity: sha1-YaajIBBiKvoHljvzJSA88SI51gQ=
+  /ws/1.1.5:
+    dependencies:
+      options: 0.0.6
+      ultron: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha512-o3KqipXNUdS7wpQzBHSe180lBGO60SoK0yVo3CYJgb2MkobuWuBX6dhkYP5ORCLd55y+SaflMOV5fqAB53ux4w==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 4
+shrinkwrapVersion: 3
+specifiers:
+  '@calculemus/abt-lambda': ^0.0.5
+  he: ^1.1.1
+  immutable: ^3.8.2
+  tinyspeck: ^1.4.2

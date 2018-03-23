@@ -1,0 +1,29 @@
+{
+  "name": "ubiquitous-squid",
+  "version": "0.0.1",
+  "description": "Glitch implementation of Alonzo, the lambda calculus slackbot",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@calculemus/abt-lambda": "^0.0.5",
+    "tinyspeck": "^1.4.2",
+    "immutable": "^3.8.2",
+    "he": "^1.1.1"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/~ubiquitous-squid"
+  },
+  "license": "MIT",
+  "keywords": [
+    "lambdacalculus",
+    "lambda",
+    "tinyspeck",
+    "slackbot",
+    "abt",
+    "pl"
+  ]
+}
